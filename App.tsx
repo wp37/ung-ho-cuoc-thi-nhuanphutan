@@ -275,11 +275,11 @@ export default function App() {
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center">
-              <GraduationCap size={20} className="text-white" />
+              <Trophy size={20} className="text-white" />
             </div>
             <div className="hidden sm:block">
-              <p className="text-white/90 font-bold text-sm leading-tight">THCS Nguyễn Văn Bảnh</p>
-              <p className="text-white/40 text-[10px]">Bình chọn Hùng biện cấp tỉnh</p>
+              <p className="text-white/90 font-bold text-sm leading-tight">Ủng hộ Đội thi Hùng biện</p>
+              <p className="text-white/40 text-[10px]">Xã Nhuận Phú Tân • Cấp tỉnh 2025–2026</p>
             </div>
           </div>
           <a
@@ -307,8 +307,8 @@ export default function App() {
         >
           <div className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-white/[0.06] backdrop-blur-xl border border-white/10 text-white/80 text-sm font-medium">
             <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <GraduationCap size={16} className="text-amber-400" />
-            Trường THCS Nguyễn Văn Bảnh • Hội thi Hùng biện THCS cấp tỉnh 2025–2026
+            <Trophy size={16} className="text-amber-400" />
+            Hội thi Hùng biện tiếng Anh THCS cấp tỉnh 2025–2026
           </div>
         </motion.div>
 
@@ -322,7 +322,7 @@ export default function App() {
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-red-500/20 via-amber-500/20 to-red-500/20 border border-red-400/20 py-3 px-4">
             <div className="flex items-center justify-center gap-2 text-amber-200 font-bold text-sm sm:text-base animate-pulse">
               <Megaphone size={20} className="text-amber-400 shrink-0" />
-              🔥 KHẨN CẤP: Tập thể THCS Nguyễn Văn Bảnh – Hãy bình chọn NGAY cho Đội Hùng Biện xã Nhuận Phú Tân! 🔥
+              🔥 HÃY ỦNG HỘ Đội thi Hùng biện xã Nhuận Phú Tân – Bình chọn NGAY số 1, 2, 3! 🔥
             </div>
           </div>
         </motion.div>
@@ -335,8 +335,8 @@ export default function App() {
           className="max-w-5xl"
         >
           <h1 className="text-[2.5rem] sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[1.05] tracking-tight">
-            <span className="text-white">Tiếp Sức </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-rose-400 to-amber-400">Đội Hùng Biện</span>
+            <span className="text-white">Hãy Ủng Hộ </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-rose-400 to-amber-400">Đội Thi Hùng Biện</span>
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-300 to-orange-400">Xã Nhuận Phú Tân!</span>
           </h1>
@@ -349,10 +349,10 @@ export default function App() {
           transition={{ delay: 0.9, duration: 0.8 }}
           className="mt-7 text-base sm:text-lg md:text-xl text-white/60 max-w-2xl leading-relaxed"
         >
-          🏫 Quý <strong className="text-white font-bold">Thầy Cô</strong> và toàn thể các em{' '}
-          <strong className="text-white font-bold">Học Sinh</strong> trường THCS Nguyễn Văn Bảnh ơi!{' '}
-          Hãy cùng chung tay bình chọn, tiếp lửa cho{' '}
-          <strong className="text-amber-300 font-bold">Đội Hùng Biện Tiếng Anh xã Nhuận Phú Tân</strong>{' '}
+          🏫 Quý <strong className="text-white font-bold">Thầy Cô</strong> cùng toàn thể các em{' '}
+          <strong className="text-white font-bold">Học Sinh</strong> ơi!{' '}
+          Hãy cùng chung tay bình chọn, ủng hộ{' '}
+          <strong className="text-amber-300 font-bold">Đội thi Hùng biện tiếng Anh xã Nhuận Phú Tân</strong>{' '}
           tại Hội thi cấp tỉnh! Mỗi lá phiếu là một lời động viên — <em className="text-pink-300">đừng để các em chiến đấu một mình!</em> 🙏
         </motion.p>
 
@@ -740,8 +740,8 @@ export default function App() {
       <footer className="relative z-10 py-8 border-t border-white/[0.05] text-center px-4">
         <div className="max-w-3xl mx-auto space-y-2">
           <p className="flex items-center justify-center gap-2 text-white/25 text-sm">
-            <GraduationCap size={16} />
-            Trường THCS Nguyễn Văn Bảnh – Hội thi Hùng biện tiếng Anh THCS cấp tỉnh 2025–2026
+            <Trophy size={16} />
+            Ủng hộ Đội thi Hùng biện tiếng Anh xã Nhuận Phú Tân – Cấp tỉnh 2025–2026
           </p>
           <p className="text-white/20 text-xs">
             Thiết kế bởi <strong className="text-white/35">Võ Ngọc Tùng</strong> • Mỗi lá phiếu, một tấm lòng 💖
