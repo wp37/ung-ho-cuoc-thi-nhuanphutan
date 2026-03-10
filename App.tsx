@@ -173,26 +173,40 @@ function Section({ children, className = '', id }: { children: React.ReactNode; 
    FOMO SOCIAL PROOF  —  "Thầy/Cô/Bạn X vừa bình chọn"
    ================================================================ */
 const FOMO_NAMES = [
-  { role: 'Thầy', name: 'Minh' },
-  { role: 'Cô', name: 'Hương' },
-  { role: 'Bạn', name: 'Tuấn Anh' },
-  { role: 'Cô', name: 'Thảo' },
-  { role: 'Thầy', name: 'Đông' },
-  { role: 'Bạn', name: 'Ngọc Trâm' },
-  { role: 'Thầy', name: 'Hùng' },
-  { role: 'Cô', name: 'Lan' },
+  { role: 'Thầy', name: 'Võ Văn Dũng' },
+  { role: 'Cô', name: 'Châu Thị Bảo Trâm' },
+  { role: 'Thầy', name: 'Cao Trí Dũng' },
+  { role: 'Thầy', name: 'Nguyễn Văn Khách' },
+  { role: 'Cô', name: 'Nguyễn Ngọc Diễm' },
+  { role: 'Cô', name: 'Nguyễn Thị Kim Phượng' },
+  { role: 'Cô', name: 'Dương Thị Thanh Thúy' },
+  { role: 'Cô', name: 'Triệu Thị Chúc' },
+  { role: 'Thầy', name: 'Nguyễn Kim Sa' },
+  { role: 'Cô', name: 'Nguyễn Thị Cẩm Duyên' },
+  { role: 'Thầy', name: 'Nguyễn Dũng Hùng' },
+  { role: 'Thầy', name: 'Nguyễn Minh Đức' },
+  { role: 'Thầy', name: 'Nguyễn Văn Sĩ' },
+  { role: 'Cô', name: 'Nguyễn Thị Kim Liên' },
+  { role: 'Cô', name: 'Nguyễn Thị Huy Hoàng' },
+  { role: 'Cô', name: 'Võ Thanh Hà' },
+  { role: 'Cô', name: 'Phan Thị Kim Ngân' },
+  { role: 'Cô', name: 'Nguyễn Ngọc Sen' },
+  { role: 'Thầy', name: 'Nguyễn Văn Thoàng' },
+  { role: 'Cô', name: 'Nguyễn Thị Ngọc Hạnh' },
+  { role: 'Cô', name: 'Nguyễn Ngọc Hảo' },
+  { role: 'Thầy', name: 'Vân Thái Hòa' },
+  { role: 'Thầy', name: 'Trần Văn Lương' },
+  { role: 'Thầy', name: 'Nguyễn Tường Long' },
+  { role: 'Thầy', name: 'Đặng Thanh Lực' },
+  { role: 'Cô', name: 'Đỗ Thị Phương Mai' },
+  { role: 'Thầy', name: 'Lê Văn Na' },
   { role: 'Bạn', name: 'Minh Khôi' },
-  { role: 'Cô', name: 'Nguyệt' },
-  { role: 'Thầy', name: 'Phước' },
+  { role: 'Bạn', name: 'Tuấn Anh' },
+  { role: 'Bạn', name: 'Ngọc Trâm' },
   { role: 'Bạn', name: 'Thùy Linh' },
-  { role: 'Thầy', name: 'Tâm' },
-  { role: 'Cô', name: 'Yến' },
-  { role: 'Bạn', name: 'Hoàng' },
-  { role: 'Cô', name: 'Mai' },
-  { role: 'Bạn', name: 'Phương' },
-  { role: 'Thầy', name: 'Nam' },
   { role: 'Bạn', name: 'Gia Hân' },
-  { role: 'Cô', name: 'Trang' },
+  { role: 'Bạn', name: 'Hoàng' },
+  { role: 'Bạn', name: 'Phương' },
 ];
 
 const FOMO_TIMES = ['vừa xong', '2 phút trước', '5 phút trước', '1 phút trước', 'vừa xong', '3 phút trước'];
@@ -322,7 +336,7 @@ export default function App() {
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-red-500/20 via-amber-500/20 to-red-500/20 border border-red-400/20 py-3 px-4">
             <div className="flex items-center justify-center gap-2 text-amber-200 font-bold text-sm sm:text-base animate-pulse">
               <Megaphone size={20} className="text-amber-400 shrink-0" />
-              🔥 HÃY ỦNG HỘ Đội thi Hùng biện xã Nhuận Phú Tân – Bình chọn NGAY số 1, 2, 3! 🔥
+              🔥 HÃY ỦNG HỘ Đội thi Hùng biện xã Nhuận Phú Tân – Bình chọn NGAY số 3, 4, 5! 🔥
             </div>
           </div>
         </motion.div>
@@ -364,9 +378,9 @@ export default function App() {
           className="mt-10 flex items-center gap-4 sm:gap-6"
         >
           <span className="text-white/30 text-sm font-semibold">Hãy chọn số</span>
-          <NumberBadge n={1} color="from-rose-500 to-pink-600" delay={1.3} />
-          <NumberBadge n={2} color="from-amber-500 to-orange-600" delay={1.45} />
-          <NumberBadge n={3} color="from-emerald-500 to-teal-600" delay={1.6} />
+          <NumberBadge n={3} color="from-rose-500 to-pink-600" delay={1.3} />
+          <NumberBadge n={4} color="from-amber-500 to-orange-600" delay={1.45} />
+          <NumberBadge n={5} color="from-emerald-500 to-teal-600" delay={1.6} />
         </motion.div>
 
         {/* Vote hint arrow */}
@@ -507,8 +521,8 @@ export default function App() {
                 step: '03',
                 icon: <CheckCircle size={28} />,
                 iconBg: 'from-emerald-500 to-teal-600',
-                title: 'Chọn Số 1, 2, 3',
-                desc: 'Nhấn chọn số 1, 2, 3 để bình chọn ủng hộ các em. Sau đó nhấn "Gửi" để hoàn tất!',
+                title: 'Chọn Số 3, 4, 5',
+                desc: 'Nhấn chọn số 3, 4, 5 để bình chọn ủng hộ các em. Sau đó nhấn "Gửi" để hoàn tất!',
                 bg: 'from-emerald-500/8 to-teal-500/8',
                 border: 'border-emerald-500/15',
               },
@@ -607,8 +621,8 @@ export default function App() {
               {
                 icon: <Trophy size={22} />,
                 iconColor: 'text-emerald-400 bg-emerald-500/15',
-                title: 'Nhớ chọn số 1, 2, 3',
-                desc: 'Xin hãy chọn đúng số 1, 2, 3 trong biểu mẫu để ủng hộ cho các em học sinh xã Nhuận Phú Tân.',
+                title: 'Nhớ chọn số 3, 4, 5',
+                desc: 'Xin hãy chọn đúng số 3, 4, 5 trong biểu mẫu để ủng hộ cho các em học sinh xã Nhuận Phú Tân.',
               },
               {
                 icon: <Heart size={22} />,
@@ -670,7 +684,7 @@ export default function App() {
               <p className="text-white/50 text-base">
                 Chỉ cần <strong className="text-amber-300 font-bold text-lg">1 cú nhấp chuột</strong>,
                 bạn đã tiếp thêm sức mạnh cho các em.
-                Hãy nhấn chọn <strong className="text-pink-300 font-bold text-lg">số 1, 2, 3</strong> để cả trường cùng đồng lòng ủng hộ!
+                Hãy nhấn chọn <strong className="text-pink-300 font-bold text-lg">số 3, 4, 5</strong> để cả trường cùng đồng lòng ủng hộ!
               </p>
               <p className="text-amber-400/80 font-bold text-sm uppercase tracking-wider animate-pulse">
                 ⏰ Thời gian không chờ đợi — Bình chọn NGAY kẻo muộn!
@@ -680,9 +694,9 @@ export default function App() {
 
           {/* Number badges row */}
           <motion.div variants={fadeUp} custom={2} className="flex justify-center gap-4 sm:gap-6 mb-10">
-            <NumberBadge n={1} color="from-rose-500 to-pink-600" delay={0} />
-            <NumberBadge n={2} color="from-amber-500 to-orange-600" delay={0.1} />
-            <NumberBadge n={3} color="from-emerald-500 to-teal-600" delay={0.2} />
+            <NumberBadge n={3} color="from-rose-500 to-pink-600" delay={0} />
+            <NumberBadge n={4} color="from-amber-500 to-orange-600" delay={0.1} />
+            <NumberBadge n={5} color="from-emerald-500 to-teal-600" delay={0.2} />
           </motion.div>
 
           {/* Main CTA — BIG AND BOLD */}
@@ -704,7 +718,7 @@ export default function App() {
               "
             >
               <Vote size={28} />
-              ✊ BÌNH CHỌN SỐ 1, 2, 3 – ỦNG HỘ NHUẬN PHÚ TÂN!
+              ✊ BÌNH CHỌN SỐ 3, 4, 5 – ỦNG HỘ NHUẬN PHÚ TÂN!
               <ExternalLink size={18} className="opacity-50" />
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-600" />
             </a>
