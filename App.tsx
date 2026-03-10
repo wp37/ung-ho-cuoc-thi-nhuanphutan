@@ -344,7 +344,7 @@ export default function App() {
           <div className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-white/[0.06] backdrop-blur-xl border border-white/10 text-white/80 text-sm font-medium">
             <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <Trophy size={16} className="text-amber-400" />
-            Hội thi Hùng biện tiếng Anh THCS cấp tỉnh 2025–2026
+            HỘI THI HÙNG BIỆN TIẾNG ANH THCS CẤP TỈNH 2025–2026
           </div>
         </motion.div>
 
@@ -358,7 +358,7 @@ export default function App() {
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-red-500/20 via-amber-500/20 to-red-500/20 border border-red-400/20 py-3 px-4">
             <div className="flex items-center justify-center gap-2 text-amber-200 font-bold text-sm sm:text-base animate-pulse">
               <Megaphone size={20} className="text-amber-400 shrink-0" />
-              🔥 HÃY ỦNG HỘ Đội thi Hùng biện xã Nhuận Phú Tân – Bình chọn NGAY số 3, 4, 5! 🔥
+              🔥 HÃY ỦNG HỘ ĐỘI THI HÙNG BIỆN XÃ NHUẬN PHÚ TÂN – BÌNH CHỌN NGAY SỐ 3, 4, 5! 🔥
             </div>
           </div>
         </motion.div>
@@ -371,10 +371,10 @@ export default function App() {
           className="max-w-5xl"
         >
           <h1 className="text-[2.5rem] sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[1.05] tracking-tight">
-            <span className="text-white">Hãy Ủng Hộ </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-rose-400 to-amber-400">Đội Thi Hùng Biện</span>
+            <span className="text-white">HÃY ỦNG HỘ </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-rose-400 to-amber-400">ĐỘI THI HÙNG BIỆN</span>
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-300 to-orange-400">Xã Nhuận Phú Tân!</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-300 to-orange-400">XÃ NHUẬN PHÚ TÂN!</span>
           </h1>
         </motion.div>
 
@@ -385,11 +385,11 @@ export default function App() {
           transition={{ delay: 0.9, duration: 0.8 }}
           className="mt-7 text-base sm:text-lg md:text-xl text-white/60 max-w-2xl leading-relaxed"
         >
-          🏫 Quý <strong className="text-white font-bold">Thầy Cô</strong> cùng toàn thể các em{' '}
-          <strong className="text-white font-bold">Học Sinh</strong> ơi!{' '}
-          Hãy cùng chung tay bình chọn, ủng hộ{' '}
-          <strong className="text-amber-300 font-bold">Đội thi Hùng biện tiếng Anh xã Nhuận Phú Tân</strong>{' '}
-          tại Hội thi cấp tỉnh! Mỗi lá phiếu là một lời động viên — <em className="text-pink-300">đừng để các em chiến đấu một mình!</em> 🙏
+          🏫 Quý <strong className="text-white font-bold uppercase tracking-wide">THẦY CÔ</strong> cùng toàn thể các em{' '}
+          <strong className="text-white font-bold uppercase tracking-wide">HỌC SINH</strong> ơi!{' '}
+          Hãy cùng chung tay BÌNH CHỌN, ỦNG HỘ{' '}
+          <strong className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-yellow-300 font-extrabold uppercase tracking-wide">ĐỘI THI HÙNG BIỆN TIẾNG ANH XÃ NHUẬN PHÚ TÂN</strong>{' '}
+          tại Hội thi cấp tỉnh! Mỗi lá phiếu là một lời động viên — <em className="text-pink-300 font-bold">ĐỪNG ĐỂ CÁC EM CHIẾN ĐẤU MỘT MÌNH!</em> 🙏
         </motion.p>
 
         {/* Number badges */}
@@ -399,7 +399,7 @@ export default function App() {
           transition={{ delay: 1.2 }}
           className="mt-10 flex items-center gap-4 sm:gap-6"
         >
-          <span className="text-white/30 text-sm font-semibold">Hãy chọn số</span>
+          <span className="text-white/30 text-sm font-bold uppercase tracking-widest">HÃY CHỌN SỐ</span>
           <NumberBadge n={3} color="from-rose-500 to-pink-600" delay={1.3} />
           <NumberBadge n={4} color="from-amber-500 to-orange-600" delay={1.45} />
           <NumberBadge n={5} color="from-emerald-500 to-teal-600" delay={1.6} />
@@ -543,8 +543,8 @@ export default function App() {
                 step: '03',
                 icon: <CheckCircle size={28} />,
                 iconBg: 'from-emerald-500 to-teal-600',
-                title: 'Chọn Số 3, 4, 5',
-                desc: 'Nhấn chọn số 3, 4, 5 để bình chọn ủng hộ các em. Sau đó nhấn "Gửi" để hoàn tất!',
+                title: 'CHỌN SỐ 3, 4, 5',
+                desc: 'Nhấn chọn SỐ 3, 4, 5 để BÌNH CHỌN ỦNG HỘ các em. Sau đó nhấn "GỬI" để hoàn tất!',
                 bg: 'from-emerald-500/8 to-teal-500/8',
                 border: 'border-emerald-500/15',
               },
@@ -643,8 +643,8 @@ export default function App() {
               {
                 icon: <Trophy size={22} />,
                 iconColor: 'text-emerald-400 bg-emerald-500/15',
-                title: 'Nhớ chọn số 3, 4, 5',
-                desc: 'Xin hãy chọn đúng số 3, 4, 5 trong biểu mẫu để ủng hộ cho các em học sinh xã Nhuận Phú Tân.',
+                title: 'NHỚ CHỌN SỐ 3, 4, 5',
+                desc: 'Xin hãy chọn đúng SỐ 3, 4, 5 trong biểu mẫu để ỦNG HỘ cho các em học sinh xã NHUẬN PHÚ TÂN.',
               },
               {
                 icon: <Heart size={22} />,
@@ -691,11 +691,11 @@ export default function App() {
           </motion.div>
 
           <motion.div variants={fadeUp} custom={1}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-2">
-              🔥 Toàn Trường Ơi — Hành Động Ngay!
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-2 uppercase tracking-wide">
+              🔥 TOÀN TRƯỜNG ƠI — HÀNH ĐỘNG NGAY!
             </h2>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black leading-tight mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-300 to-orange-400">Đội Hùng Biện xã Nhuận Phú Tân cần BẠN!</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-300 to-orange-400 uppercase tracking-wide">ĐỘI HÙNG BIỆN XÃ NHUẬN PHÚ TÂN CẦN BẠN!</span>
             </h2>
             <div className="max-w-2xl mx-auto space-y-4 mb-10">
               <p className="text-white/60 text-lg">
@@ -704,9 +704,9 @@ export default function App() {
                 <strong className="text-white text-xl">Đừng để các em chiến đấu một mình!</strong>
               </p>
               <p className="text-white/50 text-base">
-                Chỉ cần <strong className="text-amber-300 font-bold text-lg">1 cú nhấp chuột</strong>,
+                Chỉ cần <strong className="text-amber-300 font-extrabold text-lg uppercase">1 CÚ NHẤP CHUỘT</strong>,
                 bạn đã tiếp thêm sức mạnh cho các em.
-                Hãy nhấn chọn <strong className="text-pink-300 font-bold text-lg">số 3, 4, 5</strong> để cả trường cùng đồng lòng ủng hộ!
+                Hãy nhấn chọn <strong className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-rose-400 font-extrabold text-lg">SỐ 3, 4, 5</strong> để cả trường cùng đồng lòng ỦNG HỘ!
               </p>
               <p className="text-amber-400/80 font-bold text-sm uppercase tracking-wider animate-pulse">
                 ⏰ Thời gian không chờ đợi — Bình chọn NGAY kẻo muộn!
