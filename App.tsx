@@ -14,7 +14,7 @@ const DEADLINE = new Date('2026-03-14T23:59:59+07:00');
 const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfPqCKE69Z1rFBHB95Z_VZ78H6HS_pJGiAIq5L_atYilMd8dQ/viewform';
 const VIDEO_URL = 'https://youtu.be/Kt8XkPFmFCo?si=pYUHJ6nQmL-wEi7f';
 const VIDEO_EMBED = 'https://www.youtube.com/embed/Kt8XkPFmFCo?si=pYUHJ6nQmL-wEi7f';
-const ZALO_PHONE = '0814666040'; // CTA gọi tôi
+
 
 /* ================================================================
    HOOKS
@@ -167,64 +167,82 @@ function Section({ children, className = '', id }: { children: React.ReactNode; 
   );
 }
 
+
+
 /* ================================================================
-   FLOATING CTA  —  "Gọi tôi"
+   FOMO SOCIAL PROOF  —  "Thầy/Cô/Bạn X vừa bình chọn"
    ================================================================ */
-function FloatingCTA() {
-  const [open, setOpen] = useState(false);
+const FOMO_NAMES = [
+  { role: 'Thầy', name: 'Minh' },
+  { role: 'Cô', name: 'Hương' },
+  { role: 'Bạn', name: 'Tuấn Anh' },
+  { role: 'Cô', name: 'Thảo' },
+  { role: 'Thầy', name: 'Đông' },
+  { role: 'Bạn', name: 'Ngọc Trâm' },
+  { role: 'Thầy', name: 'Hùng' },
+  { role: 'Cô', name: 'Lan' },
+  { role: 'Bạn', name: 'Minh Khôi' },
+  { role: 'Cô', name: 'Nguyệt' },
+  { role: 'Thầy', name: 'Phước' },
+  { role: 'Bạn', name: 'Thùy Linh' },
+  { role: 'Thầy', name: 'Tâm' },
+  { role: 'Cô', name: 'Yến' },
+  { role: 'Bạn', name: 'Hoàng' },
+  { role: 'Cô', name: 'Mai' },
+  { role: 'Bạn', name: 'Phương' },
+  { role: 'Thầy', name: 'Nam' },
+  { role: 'Bạn', name: 'Gia Hân' },
+  { role: 'Cô', name: 'Trang' },
+];
+
+const FOMO_TIMES = ['vừa xong', '2 phút trước', '5 phút trước', '1 phút trước', 'vừa xong', '3 phút trước'];
+
+function FomoNotifications() {
+  const [current, setCurrent] = useState<{ role: string; name: string; time: string } | null>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout>;
+    const show = () => {
+      const person = FOMO_NAMES[Math.floor(Math.random() * FOMO_NAMES.length)];
+      const time = FOMO_TIMES[Math.floor(Math.random() * FOMO_TIMES.length)];
+      setCurrent({ ...person, time });
+      setVisible(true);
+      // Hide after 4 seconds
+      timeout = setTimeout(() => {
+        setVisible(false);
+        // Schedule next after 4–8 seconds
+        timeout = setTimeout(show, 4000 + Math.random() * 4000);
+      }, 4000);
+    };
+    // First one after 6 seconds
+    timeout = setTimeout(show, 6000);
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-6 left-4 sm:left-6 z-50 pointer-events-none">
       <AnimatePresence>
-        {open && (
+        {visible && current && (
           <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.8 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.8 }}
-            className="flex flex-col gap-2"
+            initial={{ opacity: 0, x: -80, scale: 0.85 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, x: -80, scale: 0.85 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+            className="flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-white/[0.1] backdrop-blur-2xl border border-white/[0.12] shadow-[0_8px_32px_rgba(0,0,0,0.3)] pointer-events-auto max-w-[320px]"
           >
-            <a
-              href={`tel:${ZALO_PHONE}`}
-              className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-emerald-500 text-white font-semibold shadow-xl shadow-emerald-500/30 hover:bg-emerald-400 transition-colors text-sm"
-            >
-              <Phone size={18} /> Gọi: {ZALO_PHONE}
-            </a>
-            <a
-              href={`https://zalo.me/${ZALO_PHONE}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-blue-500 text-white font-semibold shadow-xl shadow-blue-500/30 hover:bg-blue-400 transition-colors text-sm"
-            >
-              <MessageCircle size={18} /> Chat Zalo
-            </a>
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center shrink-0">
+              <CheckCircle size={20} className="text-white" />
+            </div>
+            <div className="min-w-0">
+              <p className="text-white text-sm font-bold truncate">
+                {current.role} {current.name} <span className="text-emerald-400">vừa bình chọn</span> ✅
+              </p>
+              <p className="text-white/40 text-xs">{current.time}</p>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
-
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => setOpen(!open)}
-        className={`
-          w-16 h-16 rounded-full shadow-2xl
-          flex items-center justify-center
-          transition-all duration-300
-          ${open
-            ? 'bg-white/20 backdrop-blur-xl border border-white/20 text-white'
-            : 'bg-gradient-to-br from-emerald-400 to-teal-500 text-white shadow-emerald-500/40'
-          }
-        `}
-      >
-        {open ? (
-          <span className="text-2xl font-bold">✕</span>
-        ) : (
-          <Phone size={26} className="animate-pulse" />
-        )}
-      </motion.button>
-
-      {/* Pulse ring */}
-      {!open && (
-        <div className="absolute bottom-0 right-0 w-16 h-16 rounded-full bg-emerald-400/30 animate-ping pointer-events-none" />
-      )}
     </div>
   );
 }
@@ -247,7 +265,7 @@ export default function App() {
       </div>
 
       <Starfield />
-      <FloatingCTA />
+      <FomoNotifications />
 
       {/* ───── STICKY HEADER ───── */}
       <motion.header
