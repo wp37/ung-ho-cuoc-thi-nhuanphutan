@@ -15,7 +15,6 @@ const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfPqCKE69Z1rFBHB95Z_V
 const VIDEO_URL = 'https://youtu.be/Kt8XkPFmFCo?si=pYUHJ6nQmL-wEi7f';
 const VIDEO_EMBED = 'https://www.youtube.com/embed/Kt8XkPFmFCo?si=pYUHJ6nQmL-wEi7f';
 
-
 /* ================================================================
    HOOKS
    ================================================================ */
@@ -695,7 +694,7 @@ export default function App() {
               🔥 TOÀN TRƯỜNG ƠI — HÀNH ĐỘNG NGAY!
             </h2>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black leading-tight mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-300 to-orange-400 uppercase tracking-wide">ĐỘI HÙNG BIỆN XÃ NHUẬN PHÚ TÂN CẦN BẠN!</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-300 to-orange-400 uppercase tracking-wide">ĐỘI HÙNG BIỆN XÃ NHUẬN PHÚ TÂN Cần BẠN!</span>
             </h2>
             <div className="max-w-2xl mx-auto space-y-4 mb-10">
               <p className="text-white/60 text-lg">
