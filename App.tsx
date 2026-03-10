@@ -14,6 +14,7 @@ const DEADLINE = new Date('2026-03-14T23:59:59+07:00');
 const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfPqCKE69Z1rFBHB95Z_VZ78H6HS_pJGiAIq5L_atYilMd8dQ/viewform';
 const VIDEO_URL = 'https://youtu.be/Kt8XkPFmFCo?si=pYUHJ6nQmL-wEi7f';
 const VIDEO_EMBED = 'https://www.youtube.com/embed/Kt8XkPFmFCo?si=pYUHJ6nQmL-wEi7f';
+sửa thành cần Bạn
 
 /* ================================================================
    HOOKS
@@ -694,7 +695,7 @@ export default function App() {
               🔥 TOÀN TRƯỜNG ƠI — HÀNH ĐỘNG NGAY!
             </h2>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black leading-tight mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-300 to-orange-400 uppercase tracking-wide">ĐỘI HÙNG BIỆN XÃ NHUẬN PHÚ TÂN Cần BẠN!</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-300 to-orange-400 tracking-wide">ĐỘI HÙNG BIỆN XÃ NHUẬN PHÚ TÂN cần BẠN!</span>
             </h2>
             <div className="max-w-2xl mx-auto space-y-4 mb-10">
               <p className="text-white/60 text-lg">
