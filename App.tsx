@@ -10,7 +10,7 @@ import {
 /* ================================================================
    CONFIG
    ================================================================ */
-const DEADLINE = new Date('2026-03-20T23:59:59+07:00');
+const DEADLINE = new Date('2026-03-14T23:59:59+07:00');
 const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfPqCKE69Z1rFBHB95Z_VZ78H6HS_pJGiAIq5L_atYilMd8dQ/viewform';
 const VIDEO_URL = 'https://youtu.be/Kt8XkPFmFCo?si=pYUHJ6nQmL-wEi7f';
 const VIDEO_EMBED = 'https://www.youtube.com/embed/Kt8XkPFmFCo?si=pYUHJ6nQmL-wEi7f';
@@ -448,7 +448,7 @@ export default function App() {
           )}
 
           <motion.p variants={fadeUp} custom={2} className="mt-6 text-white/30 text-sm">
-            Hạn chót: <strong className="text-white/60">20/03/2026 – 23:59</strong>
+            Hạn chót: <strong className="text-white/60">14/03/2026 – 23:59</strong>
           </motion.p>
         </div>
       </Section>
